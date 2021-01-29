@@ -5,5 +5,9 @@
 Interact With a Pod:
 
 - kubectl get po : Get pod name
-- kubectl logs '<pod-name>': dump pod logs
-- kubectl logs -f <pod-name>: -f option to stream pod logs
+- kubectl logs POD_NAME: dump pod logs
+- kubectl logs -f POD_NAME: -f option to stream pod logs
+  
+Connection into the POD container:
+
+- kubectl exec -it POD_NAME -- /bin/bash
