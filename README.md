@@ -11,3 +11,8 @@ Interact With a Pod:
 Connection into the POD container:
 
 - kubectl exec -it POD_NAME -- /bin/bash
+
+Get YAML output of POD and Service:
+
+- kubectl get pod POD_NAME -o yaml
+- kubectl get service SERVICE_NAME -o yaml
