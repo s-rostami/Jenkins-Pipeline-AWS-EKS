@@ -10,7 +10,12 @@ eksctl create cluster --name=node-server \
                       --zones=us-east-1a,us-east-1b \
                       --without-nodegroup 
 ```
+Getting the cluster list:
 
+```
+eksctl get clusters
+
+```
 
 
 
