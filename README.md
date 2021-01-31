@@ -1,12 +1,14 @@
 # Kubernetes
 
+
+
 Crearing a cluster without the nodegroup:
-'''
+```
 eksctl create cluster --name=node-server \
                       --region=us-east-1 \
                       --zones=us-east-1a,us-east-1b \
                       --without-nodegroup 
-'''
+```
 
 
 
