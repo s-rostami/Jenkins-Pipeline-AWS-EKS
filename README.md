@@ -2,7 +2,7 @@
 
 
 
-01-Create EKS Cluster using eksctl:
+##01-Create EKS Cluster using eksctl:
 
 ```
 eksctl create cluster --name=node-server \
