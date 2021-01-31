@@ -2,7 +2,7 @@
 
 
 
-## 01-Create EKS Cluster using eksctl:
+### 01- Create EKS Cluster using eksctl:
 
 ```
 eksctl create cluster --name=node-server \
@@ -14,7 +14,14 @@ Getting the cluster list:
 
 ```
 eksctl get clusters
+```
+### 02- Create & Associate IAM OIDC Provider for the EKS Cluster
 
+```
+eksctl utils associate-iam-oidc-provider \
+    --region us-east-1 \
+    --cluster node-server \
+    --approve
 ```
 
 
