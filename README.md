@@ -2,7 +2,8 @@
 
 
 
-Crearing a cluster without the nodegroup:
+01-Create EKS Cluster using eksctl:
+
 ```
 eksctl create cluster --name=node-server \
                       --region=us-east-1 \
