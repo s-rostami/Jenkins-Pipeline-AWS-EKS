@@ -22,7 +22,7 @@ eksctl delete cluster node-server
 ```
 eksctl utils associate-iam-oidc-provider \
     --region us-east-1 \
-    --cluster node-server \
+    --cluster node-server\
     --approve
 ```
 
