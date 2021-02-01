@@ -14,7 +14,9 @@ Getting the cluster list:
 
 ```
 eksctl get clusters
+eksctl delete cluster node-server
 ```
+
 ### 02- Create & Associate IAM OIDC Provider for the EKS Cluster:
 
 ```
@@ -44,8 +46,19 @@ eksctl create nodegroup --cluster=node-server \
                        --appmesh-access \
                        --alb-ingress-access 
 ```
+Get Worker Nodes Status and other actions:
 
+```
+kubectl get nodes -o wide
+kubectl describe pod my-first-pod 
+kutectl delete nodegroup 
 
+```
+
+### 04- Create a POD:
+
+kubectl delete pod my-first-pod
+kubectl describe pod my-first-pod 
 
 
 
