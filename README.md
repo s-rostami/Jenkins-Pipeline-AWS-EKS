@@ -58,24 +58,31 @@ kutectl delete nodegroup
 ### 04- Create a POD:
 
 ```
-kubectl delete pod my-first-pod
-kubectl describe pod my-first-pod 
-```
-
-
-
+kubectl run <desired-pod-name> --image <Container-Image> --generator=run-pod/v1
 
 Interact With a Pod:
 
-- kubectl get po : Get pod name
-- kubectl logs POD_NAME: dump pod logs
-- kubectl logs -f POD_NAME: -f option to stream pod logs
-  
+kubectl get po : Get pod name
+kubectl logs <POD_NAME>: dump pod logs
+kubectl logs -f POD_NAME: -f option to stream pod logs
+kubectl describe pod <Pod-Name>    "good for trouble shooting"
+kubectl delete pod <Pod-Name>
+
 Connection into the POD container:
 
-- kubectl exec -it POD_NAME -- /bin/bash
+kubectl exec -it POD_NAME -- /bin/bash
 
 Get YAML output of POD and Service:
 
-- kubectl get pod POD_NAME -o yaml
-- kubectl get service SERVICE_NAME -o yaml
+kubectl get pod POD_NAME -o yaml
+```
+  
+
+### 05- Expose Pod as a Service:
+```
+kubectl expose pod <Pod-Name>  --type=NodePort --port=80 --name=<Service-Name>
+
+kubectl get service SERVICE_NAME -o yaml
+```
+if the container is listening on a port different than 80 we need to define it in the command using the target node.
+
