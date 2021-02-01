@@ -57,9 +57,10 @@ kutectl delete nodegroup
 
 ### 04- Create a POD:
 
+```
 kubectl delete pod my-first-pod
 kubectl describe pod my-first-pod 
-
+```
 
 
 
