@@ -44,6 +44,11 @@ eksctl  get iamserviceaccount --cluster ntier
 kubectl describe sa alb-ingress-controller -n kube-system
 ```
 
+### 04-Deploying the pods, services and the ALB:
 
+```
+kubectl apply -f kube-manifests/
+
+```
 
 
