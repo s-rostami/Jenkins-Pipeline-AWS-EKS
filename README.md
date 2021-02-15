@@ -32,7 +32,7 @@ eksctl utils associate-iam-oidc-provider \
 eksctl create nodegroup --cluster=node-server \
                        --region=us-east-1 \
                        --name=node-server-ng-public1 \
-                       --node-type=t2.micro \
+                       --node-type=t3.medium \
                        --nodes=2 \
                        --nodes-min=2 \
                        --nodes-max=4 \
