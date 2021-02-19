@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps{
                 sh '''
-                ~/kubectl apply -f 01-front-end-App-Deployment-and-NodePortService.yml
+                kubectl apply -f 01-front-end-App-Deployment-and-NodePortService.yml
                 '''
       }
     }
