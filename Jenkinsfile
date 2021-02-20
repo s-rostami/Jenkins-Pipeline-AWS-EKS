@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps{
                 sh '''
-                eksctl get clusters
+                eksctl get clusters --region us-east-1
                
                 '''
       }
