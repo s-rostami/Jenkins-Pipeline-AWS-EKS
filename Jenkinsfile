@@ -5,7 +5,7 @@ pipeline {
       steps{
                 sh '''
                 eksctl get clusters --region us-east-1
-                kubectl apply -f 01-front-end-App-Deployment-and-NodePortService.yml
+                kubectl run frontend --image public.ecr.aws/o8f5t9n7/frontend-v1
                
                 '''
       }
